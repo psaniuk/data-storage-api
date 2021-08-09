@@ -2,7 +2,7 @@ name: .NET
 
 on:
   push:
-    branches: [ master ]
+    branches: [ main ]
   pull_request:
     branches: [ main ]
 
@@ -12,9 +12,9 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v2
+    - uses: src
     - name: Setup .NET
-      uses: actions/setup-dotnet@v1
+      uses: src
       with:
         dotnet-version: 5.0.x
     - name: Restore dependencies
