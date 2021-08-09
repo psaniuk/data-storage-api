@@ -12,11 +12,13 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: psaniuk/data-storage-api/src
+    - uses: actions/checkout@v2
     - name: Setup .NET
-      uses: psaniuk/data-storage-api/src
+      uses: actions/setup-dotnet@v1
       with:
         dotnet-version: 5.0.x
+    - name: Enter src directory
+      run: cd src
     - name: Restore dependencies
       run: dotnet restore
     - name: Build
