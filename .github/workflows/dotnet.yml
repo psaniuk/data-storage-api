@@ -12,9 +12,9 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: src
+    - uses: psaniuk/data-storage-api/src
     - name: Setup .NET
-      uses: src
+      uses: psaniuk/data-storage-api/src
       with:
         dotnet-version: 5.0.x
     - name: Restore dependencies
